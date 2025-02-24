@@ -3,19 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #1b1f3a;
+  --darkb: #0f111e;
+  --apo: #53354a;
+  --apo1: #a64942;
+  --apo2: #ff7844;
 }
 
 body {
-  color: var(--foreground);
+  color: var(--apo1);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Nunito, sans-serif;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
