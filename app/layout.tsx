@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Montserrat } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 const nunito = Nunito({
+  variable: "--font-rokkitt",
+  subsets: ["latin"],
+});
+const montserrat = Montserrat({
   variable: "--font-rokkitt",
   subsets: ["latin"],
 });
@@ -20,7 +25,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} antialiased`}>{children}</body>
+      <body className={`${nunito.variable} ${montserrat.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
