@@ -12,8 +12,8 @@ export default function Home() {
       <Hero />
       <About />
       <Experience />
-      <div className="pl-5 w-52 h-10 hidden md:block rounded-r-full fixed left-0 bottom-20">
-        you've read {Math.floor(usedocProgress())}% of this page
+      <div className="pl-5 w-52 h-10 text-xs md:text-sm rounded-r-full fixed left-0 bottom-5 md:bottom-20">
+        you&apos;ve read {Math.floor(usedocProgress())}% of this page
       </div>
     </div>
   );

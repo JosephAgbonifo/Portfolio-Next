@@ -33,7 +33,7 @@ const About = () => {
           </p>
           <p className="font-sans text-sm text-mygray mb-3  indent-4">
             His approach to web development is rooted in curiosity and
-            experimentation—whether he's coding an e-learning platform,
+            experimentation—whether he&apos;s coding an e-learning platform,
             architecting vibrant study communities, or diving into the world of
             Web3. Like a skilled chemist in the lab, he thrives on mixing
             unexpected elements: aesthetics and functionality, spontaneity and
@@ -61,7 +61,7 @@ const About = () => {
             experiences that inspire and connect.
           </p>
           <p className="font-sans text-sm text-mygray mb-3  indent-4">
-            Whether you're building something new or breathing life into an
+            Whether you&apos;re building something new or breathing life into an
             existing idea, Joseph brings the mindset, skill, and soul to make it
             thrive.
           </p>
