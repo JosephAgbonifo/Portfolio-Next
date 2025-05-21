@@ -1,6 +1,5 @@
 import Blink from "@/utils/blink";
 import TypewriterLoop from "@/utils/typewriter";
-import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
@@ -15,7 +14,7 @@ console.log("Sum:", sumArray(numbers));
 
   return (
     <div>
-      <div className="flex relative flex-col md:flex-row pt-36 md:pt-0 h-screen">
+      <div className="flex relative flex-col md:flex-row pt-20 md:pt-0 h-screen">
         <div className="flex-1 flex justify-center items-start pl-10 flex-col">
           <h1 className="text-4xl font-bold text-white">
             Joseph Agbonifo <Blink />
