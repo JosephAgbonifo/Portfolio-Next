@@ -28,7 +28,7 @@ const Header = () => {
             : scrollPercent < 100
             ? "top-5  md:left-[30%]  left-[10%]"
             : "top-5  md:left-[10%]  left-[10%]"
-        } p-2 opacity-50 hover:opacity-80 rounded-full h-10 md:h-14 flex overflow-hidden transition-all duration-700 items-center justify-between  fixed  w-[80%] md:w-[40%] bg-magenta z-10`}
+        } p-2 md:opacity-50 md:hover:opacity-80 rounded-full h-10 md:h-14 flex overflow-hidden transition-all duration-700 items-center justify-between  fixed  w-[80%] md:w-[40%] bg-magenta z-10`}
       >
         <HeaderLink2 text="home" href="/" />
         <HeaderLink2 text="about" href="/" />
