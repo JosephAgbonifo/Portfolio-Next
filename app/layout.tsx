@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${firaSans.variable} ${firaCode.variable} antialiased`}>
+      <body
+        className={`${firaSans.variable} ${firaCode.variable} hide-scrollbar antialiased`}
+      >
         {children}
       </body>
     </html>

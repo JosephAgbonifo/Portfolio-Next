@@ -2,24 +2,27 @@
 import Image from "next/image";
 import React from "react";
 import { useScrollProgress } from "@/utils/scrollpercent";
+import ParallaxItem from "@/utils/parallax";
 
 const About = () => {
   const scrollPercent = useScrollProgress();
   console.log(scrollPercent);
   return (
-    <div className="min-h-screen p-10 bg-background/80 bg-[url('/images/about.png')] bg-blend-multiply bg-center bg-cover bg-fixed">
+    <div className="min-h-screen p-10 bg-transparent">
       <div className="relative flex flex-col md:flex-row">
         <div className="flex-1 flex justify-center items-center md:pl-10 flex-col">
-          <Image
-            src="/icons/me.png"
-            alt="rocket boost"
-            width={300}
-            height={300}
-            unoptimized
-            className="w-32 md:w-80 block rounded-full border-2 border-magenta"
-          />
+          <ParallaxItem speed={0.2}>
+            <Image
+              src="/icons/me.png"
+              alt="rocket boost"
+              width={300}
+              height={300}
+              unoptimized
+              className="w-32 md:w-80 block rounded-full border-2 border-magenta"
+            />
+          </ParallaxItem>
         </div>
-        <div className="flex-1 flex text-justify justify-center items-start md:pl-10 flex-col">
+        <div className="flex-1 flex text-justify justify-center items-start md:px-10 flex-col bg-black">
           <h2 className="text-center md:text-left text-xl md:text-2xl pb-10 pt-10 ">
             {" "}
             About Joseph

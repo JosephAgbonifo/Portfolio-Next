@@ -16,6 +16,18 @@
   --color-mygray: var(--mygray);
 }
 
+@layer utilities {
+  .hide-scrollbar {
+    /* Firefox */
+    scrollbar-width: none;
+    /* IE & Edge */
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 body {
   font-size: 1rem;
   background: var(--background);
@@ -24,6 +36,17 @@ body {
   letter-spacing: 0.03em;
 }
 
+html {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE & Edge */
+  -ms-overflow-style: none;
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
 h1,
 h2,
 h3 {
