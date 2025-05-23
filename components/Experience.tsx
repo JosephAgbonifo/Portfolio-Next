@@ -62,22 +62,22 @@ const Experience = () => {
   );
 };
 
-function Projects({
-  text,
-  direction,
-  img1,
-  img2,
-}: {
-  text: string;
-  direction: string;
-  img1: string;
-  img2: string;
-}) {
-  return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="text-7xl md:text-8xl font-bold text-white">{text}</h1>
-    </div>
-  );
-}
+// function Projects({
+//   text,
+//   direction,
+//   img1,
+//   img2,
+// }: {
+//   text: string;
+//   direction: string;
+//   img1: string;
+//   img2: string;
+// }) {
+//   return (
+//     <div className="flex flex-col items-center justify-center">
+//       <h1 className="text-7xl md:text-8xl font-bold text-white">{text}</h1>
+//     </div>
+//   );
+// }
 
 export default Experience;

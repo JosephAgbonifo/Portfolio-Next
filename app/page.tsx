@@ -11,7 +11,7 @@ export default function Home() {
   // If you need scroll tracking, use useEffect with cleanup
   useEffect(() => {
     const handleScroll = (e: Event) => {
-      // Your scroll handling logic (without console.log)
+      e.preventDefault();
     };
 
     window.addEventListener("scroll", handleScroll, true);

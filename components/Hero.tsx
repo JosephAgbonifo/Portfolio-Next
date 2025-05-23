@@ -1,5 +1,5 @@
 "use client";
-import Blink from "@/utils/blink";
+
 import TypewriterLoop from "@/utils/typewriter";
 import Image from "next/image";
 import React from "react";
