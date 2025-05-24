@@ -15,13 +15,29 @@ const Experience = () => {
           unoptimized
         />
       </ParallaxItem>
-      <ParallaxItem speed={0.2}>
-        <h1 className="text-7xl md:text-8xl font-bold text-white">
-          Featured
-          <br />
-          Works :
-        </h1>{" "}
-      </ParallaxItem>
+      <h1 className="text-7xl md:text-8xl font-bold text-white mb-20">
+        Featured
+        <br />
+        Works :
+      </h1>
+      <Projects
+        text="Peakify — Learn to Reach Your Peak"
+        direction="right"
+        img1="/projects/peakify2.png"
+        img2="/projects/peakify1.png"
+      />
+      <Projects
+        text="Interwooven — A Collaborative, Multi-Niche Blog"
+        direction="left"
+        img1="/projects/inter_1.png"
+        img2="/projects/inter_2.png"
+      />
+      <Projects
+        text="Quirklr — Spontaneous Study Sessions"
+        direction="right"
+        img1="/projects/quirklr2.png"
+        img2="/projects/quirklr1.png"
+      />
       <FloatingBobble
         speed={1.2}
         size={50}
@@ -62,22 +78,48 @@ const Experience = () => {
   );
 };
 
-// function Projects({
-//   text,
-//   direction,
-//   img1,
-//   img2,
-// }: {
-//   text: string;
-//   direction: string;
-//   img1: string;
-//   img2: string;
-// }) {
-//   return (
-//     <div className="flex flex-col items-center justify-center">
-//       <h1 className="text-7xl md:text-8xl font-bold text-white">{text}</h1>
-//     </div>
-//   );
-// }
+function Projects({
+  text,
+  direction,
+  img1,
+  img2,
+}: {
+  text: string;
+  direction: string;
+  img1: string;
+  img2: string;
+}) {
+  const isLeft = direction === "left";
 
+  return (
+    <div className="md: mb-20">
+      <div
+        className={`w-full flex flex-col md:flex-row items-center justify-center gap-10 px-4 md:px-20 ${
+          isLeft ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
+      >
+        <div className="w-full md:w-1/2">
+          <Image
+            src={img1}
+            alt={`${text} preview 1`}
+            width={800}
+            height={600}
+            className="rounded-2xl shadow-lg"
+          />
+        </div>
+        <div className="w-full md:w-1/2 text-white text-center md:text-left">
+          <h2 className="text-4xl font-bold mb-4">{text}</h2>
+          <Image
+            src={img2}
+            alt={`${text} preview 2`}
+            width={800}
+            height={600}
+            className="rounded-2xl shadow-lg mt-6"
+          />
+        </div>
+      </div>
+      <hr className="md:hidden my-10 text-magenta" />
+    </div>
+  );
+}
 export default Experience;

@@ -2,6 +2,7 @@
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 import HorizontalLines from "@/utils/bgline";
 import FloatingBobble from "@/utils/bobbles";
 import { usedocProgress } from "@/utils/scrollpercent";
@@ -22,6 +23,7 @@ export default function Home() {
     <div className="relative font-code overflow-x-hidden">
       <Hero />
       <About />
+      <Skills />
       <Experience />
       <div className="pl-5 w-52 h-10 text-xs md:text-sm rounded-r-full fixed left-0 bottom-5 md:bottom-20">
         you&apos;ve read {Math.floor(usedocProgress())}% of this page
