@@ -1,15 +1,16 @@
-"use client";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { projects } from "@/data/data";
 import HorizontalLines from "@/utils/bgline";
 import FloatingBobble from "@/utils/bobbles";
 
-interface ProjectParams {
-  slug: string;
+interface Props {
+  params: {
+    slug: string;
+  };
 }
 
-export default function ProjectPage({ params }: { params: ProjectParams }) {
+export default function ProjectPage({ params }: Props) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
@@ -46,24 +47,6 @@ export default function ProjectPage({ params }: { params: ProjectParams }) {
           ))}
         </ul>
       </div>
-      {/* <div className="flex space-x-4">
-        <a
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
-        >
-          Live Site
-        </a>
-        <a
-          href={project.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:underline"
-        >
-          Source Code
-        </a>
-      </div> */}
 
       <div className="fixed inset-0 z-[-10] pointer-events-none">
         <FloatingBobble speed={0.3} size={30} left="10%" color="#60a5fa" />
