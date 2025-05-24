@@ -12,7 +12,7 @@ interface PageProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default function ProjectPage({ params, searchParams }: PageProps) {
+export default function ProjectPage({ params }: PageProps) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
