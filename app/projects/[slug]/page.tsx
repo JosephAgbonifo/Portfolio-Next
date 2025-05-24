@@ -19,14 +19,14 @@ export default function ProjectPage({ params }: { params: ProjectParams }) {
   return (
     <div className="max-w-4xl mx-auto p-6 font-mono">
       <h1 className="text-3xl font-bold my-10">{project.title}</h1>
-      <Image
-        width={800}
-        height={600}
-        src={project.image}
-        alt={project.title}
-        className="w-full my-10 rounded-2xl hover:shadow-lg transition-shadow duration-300 ease-in-out"
-        loading="lazy"
-      />
+     <div className="relative w-full h-96 my-10">
+       <Image
+         fill
+         src={project.image}
+         alt={project.title}
+         className="rounded-2xl hover:shadow-lg transition-shadow duration-300 ease-in-out object-cover"
+       />
+     </div>
       <p className="mb-10 text-white font-sans text-justify">
         {project.description}
       </p>
@@ -115,5 +115,7 @@ export default function ProjectPage({ params }: { params: ProjectParams }) {
         <HorizontalLines />
       </div>
     </div>
+  );
+}
   );
 }
