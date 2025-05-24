@@ -21,8 +21,8 @@ const Footer = () => {
         </h2>
         <div className="flex-1 ">
           <p className="text-sm text-gray-300 font-sans h-36 flex text-left md:text-center items-center md:justify-center">
-            I'm always open to exciting new ideas and meaningful partnerships.
-            Let's build something incredible together.
+            I&apos;m always open to exciting new ideas and meaningful
+            partnerships. Let&apot;s build something incredible together.
           </p>
 
           {/* Contact Details */}

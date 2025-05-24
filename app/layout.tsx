@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Welcome to my portfolio — I'm Joseph, a web developer focused on crafting sleek, responsive, and user-friendly web experiences.",
   icons: {
-    icon: "/icons/me.png",
+    icon: "/icons/me-nobg.png",
   },
   openGraph: {
     title: "Joseph | Developer Portfolio",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description:
       "Check out my personal dev portfolio featuring clean code, responsive designs, and web projects I’m proud of.",
     images: ["/images/cover.png"],
-    creator: "@HelloJoeDev", // Optional: update this when you're ready
+    creator: "@HelloJoeDev",
   },
 };
 

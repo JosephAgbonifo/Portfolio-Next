@@ -57,9 +57,9 @@ const About = () => {
             Joseph is not just a developer; he&apos;s a creator, a collaborator,
             and a catalyst for change. He&apos;s on a mission to make the
             digital world more vibrant, inclusive, and engaging—one line of code
-            at a time. Whether you're building something new or breathing life
-            into an existing idea, Joseph brings the mindset, skill, and soul to
-            make it thrive.
+            at a time. Whether you&apos;re building something new or breathing
+            life into an existing idea, Joseph brings the mindset, skill, and
+            soul to make it thrive.
           </p>
         </div>
         <Image

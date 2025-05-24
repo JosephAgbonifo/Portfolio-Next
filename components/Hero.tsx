@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="relative flex-1 flex justify-center items-start pl-10 flex-col">
           <ParallaxItem speed={0.5}>
             <h1 className="text-7xl md:text-8xl font-bold text-white">
-              I'm <br />
+              I&apos;m <br />
               Joseph
               <br />
               Agbonifo

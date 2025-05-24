@@ -1,5 +1,6 @@
 "use client";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { projects } from "@/data/data";
 import HorizontalLines from "@/utils/bgline";
 import FloatingBobble from "@/utils/bobbles";
@@ -18,7 +19,9 @@ export default function ProjectPage({ params }: { params: ProjectParams }) {
   return (
     <div className="max-w-4xl mx-auto p-6 font-mono">
       <h1 className="text-3xl font-bold my-10">{project.title}</h1>
-      <img
+      <Image
+        width={800}
+        height={600}
         src={project.image}
         alt={project.title}
         className="w-full my-10 rounded-2xl hover:shadow-lg transition-shadow duration-300 ease-in-out"

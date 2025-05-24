@@ -16,7 +16,6 @@ import {
   SiVercel,
   SiDocker,
   SiRust,
-  SiWeb3Dotjs,
 } from "react-icons/si";
 
 const skills = [
