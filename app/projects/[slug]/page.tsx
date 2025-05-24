@@ -4,13 +4,13 @@ import { projects } from "@/data/data";
 import HorizontalLines from "@/utils/bgline";
 import FloatingBobble from "@/utils/bobbles";
 
-interface Props {
+interface PageProps {
   params: {
     slug: string;
   };
 }
 
-export default function ProjectPage({ params }: Props) {
+export default function ProjectPage({ params }: PageProps) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
