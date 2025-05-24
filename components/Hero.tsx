@@ -11,7 +11,21 @@ const Hero = () => {
   const scrollPercent = useScrollProgress();
   const transformStyle = `rotate(${scrollPercent * 6}deg)`;
   const scrollPercentDoc = usedocProgress();
-  const codeSnippet = `MERN Developer | Tech Enthusiast | Web3 Enthusiast`;
+  const codeSnippet2 = `
+const About = () => {
+  const scrollPercent = useScrollProgress();
+  return (
+    <div className="min-h-screen p-10 bg-transparent">
+      <div className="relative flex flex-col md:flex-row">
+        <div className="flex-1 flex justify-center items-center md:pl-10 flex-col">
+          <ParallaxItem speed={0.2}>
+            MERN Developer | Tech Enthusiast | Web3 Enthusiast
+          </ParallaxItem>
+        </div>
+      </div>
+    </div>
+  );
+}; `;
 
   return (
     <div>
@@ -68,7 +82,7 @@ const Hero = () => {
         </div>
         <div className="flex-1 absolute bottom-10 w-[60%] md:w-auto right-0 md:relative text-[8px] md:text-sm flex justify-start items-center pl-10">
           <div className="h-40">
-            <TypewriterLoop text={codeSnippet} speed={100} pause={5000} />
+            <TypewriterLoop text={codeSnippet2} speed={10} pause={5000} />
           </div>
         </div>{" "}
         <Image

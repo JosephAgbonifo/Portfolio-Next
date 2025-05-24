@@ -4,18 +4,15 @@ import { projects } from "@/data/data";
 import HorizontalLines from "@/utils/bgline";
 import FloatingBobble from "@/utils/bobbles";
 
-interface PageProps {
+export default async function ProjectPage({
+  params,
+}: {
   params: Promise<{ slug: string }>;
-  searchParams?: Record<string, string | string[] | undefined>;
-}
-
-export default async function ProjectPage({ params }: PageProps) {
+}) {
   const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project) {
-    notFound();
-  }
+  if (!project) notFound();
 
   return (
     <div className="max-w-4xl mx-auto p-6 font-mono">
