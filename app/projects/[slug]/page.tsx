@@ -1,0 +1,116 @@
+"use client";
+import { notFound } from "next/navigation";
+import { projects } from "@/data/data";
+import HorizontalLines from "@/utils/bgline";
+import FloatingBobble from "@/utils/bobbles";
+
+interface ProjectParams {
+  slug: string;
+}
+
+export default function ProjectPage({ params }: { params: ProjectParams }) {
+  const project = projects.find((p) => p.slug === params.slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return (
+    <div className="max-w-4xl mx-auto p-6 font-mono">
+      <h1 className="text-3xl font-bold my-10">{project.title}</h1>
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full my-10 rounded-2xl hover:shadow-lg transition-shadow duration-300 ease-in-out"
+        loading="lazy"
+      />
+      <p className="mb-10 text-white font-sans text-justify">
+        {project.description}
+      </p>
+      <div className="mb-4">
+        <h2 className="text-xl font-semibold">Key Features:</h2>
+        <ul className="list-disc list-inside text-white font-sans">
+          {project.keyFeatures.map((feature) => (
+            <li key={feature}>{feature}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="mb-4">
+        <h2 className="text-xl font-semibold">Technologies Used:</h2>
+        <ul className="list-disc list-inside text-white font-sans">
+          {project.technologies.map((tech) => (
+            <li key={tech}>{tech}</li>
+          ))}
+        </ul>
+      </div>
+      {/* <div className="flex space-x-4">
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          Live Site
+        </a>
+        <a
+          href={project.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          Source Code
+        </a>
+      </div> */}
+
+      <div className="fixed inset-0 z-[-10] pointer-events-none">
+        <FloatingBobble speed={0.3} size={30} left="10%" color="#60a5fa" />
+        <FloatingBobble speed={0.6} size={40} left="30%" color="#a78bfa" />
+        <FloatingBobble speed={1.2} size={50} left="50%" color="#f472b6" />
+        <FloatingBobble speed={0.8} size={25} left="70%" color="#34d399" />
+        <FloatingBobble speed={0.5} size={35} left="90%" color="#fcd34d" />
+        <FloatingBobble speed={0.3} size={30} left="80%" color="#60a5fa" />
+        <FloatingBobble speed={0.6} size={40} left="60%" color="#a78bfa" />
+        <FloatingBobble speed={1.2} size={50} left="40%" color="#f472b6" />
+        <FloatingBobble speed={0.8} size={25} left="20%" color="#34d399" />
+        <FloatingBobble speed={0.5} size={35} left="0%" color="#fcd34d" />
+
+        <FloatingBobble
+          speed={1.2}
+          size={50}
+          left="10%"
+          bottom="26%"
+          color="#f472b6"
+        />
+        <FloatingBobble
+          speed={0.8}
+          size={25}
+          left="25%"
+          bottom="42%"
+          color="#34d399"
+        />
+        <FloatingBobble
+          speed={0.5}
+          size={35}
+          left="50%"
+          bottom="85%"
+          color="#fcd34d"
+        />
+        <FloatingBobble
+          speed={0.3}
+          size={30}
+          left="78%"
+          bottom="61%"
+          color="#60a5fa"
+        />
+        <FloatingBobble
+          speed={0.6}
+          size={40}
+          left="93%"
+          bottom="15%"
+          color="#a78bfa"
+        />
+        <HorizontalLines />
+      </div>
+    </div>
+  );
+}

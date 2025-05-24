@@ -41,6 +41,7 @@ html {
   scrollbar-width: none;
   /* IE & Edge */
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
 
 /* Chrome, Safari, Opera */

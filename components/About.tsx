@@ -6,7 +6,6 @@ import ParallaxItem from "@/utils/parallax";
 
 const About = () => {
   const scrollPercent = useScrollProgress();
-  console.log(scrollPercent);
   return (
     <div className="min-h-screen p-10 bg-transparent">
       <div className="relative flex flex-col md:flex-row">

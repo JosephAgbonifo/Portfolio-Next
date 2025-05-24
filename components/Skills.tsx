@@ -36,7 +36,6 @@ const skills = [
   { name: "Vercel", icon: <SiVercel className="text-white" /> },
   { name: "Docker", icon: <SiDocker className="text-blue-300" /> },
   { name: "Rust", icon: <SiRust className="text-orange-600" /> },
-  { name: "Web3", icon: <SiWeb3Dotjs className="text-violet-400" /> },
 ];
 
 const Skills = () => {

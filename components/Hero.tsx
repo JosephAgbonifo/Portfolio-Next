@@ -25,22 +25,37 @@ const Hero = () => {
               Agbonifo
             </h1>{" "}
           </ParallaxItem>
-          <div className="grid grid-cols-4 gap-5 fixed right-10 top-10 mt-4 rotate-[270deg] origin-top-right text-lg font-sans font-bold">
-            <Link href="/whatsapp" className="text-white">
+          <div
+            className={`${
+              scrollPercent > 99
+                ? "hidden"
+                : "fixed w-[80%] left-[10%] md:hidden md:right-10 top-10 mt-4 md:rotate-[270deg] md:origin-top-right "
+            }grid grid-cols-4 gap-5 text-sm md:text-lg font-sans md:font-bold text-center`}
+          >
+            <Link href="https://wa.link/9tu764" className="text-white">
               Whatsapp
             </Link>
-            <Link href="/github" className="text-white">
+            <Link
+              href="https://github.com/josephagbonifo"
+              className="text-white"
+            >
               Github
             </Link>
-            <Link href="/linkedin" className="text-white">
+            <Link
+              href="https://www.linkedin.com/in/josephagbonifo/"
+              className="text-white"
+            >
               LinkedIn
             </Link>
-            <Link href="/twitter" className="text-white">
+            <Link href="https://x.com/HelloJoeDev" className="text-white">
               Twitter
             </Link>
           </div>
 
           <button
+            onClick={() => {
+              location.href = "#footer";
+            }}
             className={`absolute bottom-10 w-32 mt-6 px-4 py-2 bg-magenta text-white rounded hover:bg-foreground transition-all duration-300 ease-in-out`}
             style={{
               transform: `translateY(${scrollPercent}px)`,

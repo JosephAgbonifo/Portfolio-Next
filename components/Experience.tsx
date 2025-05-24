@@ -1,6 +1,7 @@
 import FloatingBobble from "@/utils/bobbles";
 import ParallaxItem from "@/utils/parallax";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Experience = () => {
@@ -21,18 +22,21 @@ const Experience = () => {
         Works :
       </h1>
       <Projects
+        href={`/projects/peakify`}
         text="Peakify — Learn to Reach Your Peak"
         direction="right"
         img1="/projects/peakify2.png"
         img2="/projects/peakify1.png"
       />
       <Projects
+        href={`/projects/interwooven`}
         text="Interwooven — A Collaborative, Multi-Niche Blog"
         direction="left"
         img1="/projects/inter_1.png"
         img2="/projects/inter_2.png"
       />
       <Projects
+        href={`/projects/quirklr`}
         text="Quirklr — Spontaneous Study Sessions"
         direction="right"
         img1="/projects/quirklr2.png"
@@ -73,7 +77,6 @@ const Experience = () => {
         bottom="15%"
         color="#a78bfa"
       />
-      <div className="h-screen"></div>
     </div>
   );
 };
@@ -83,18 +86,20 @@ function Projects({
   direction,
   img1,
   img2,
+  href = "#",
 }: {
   text: string;
   direction: string;
   img1: string;
   img2: string;
+  href?: string;
 }) {
   const isLeft = direction === "left";
 
   return (
     <div className="md: mb-20">
       <div
-        className={`w-full flex flex-col md:flex-row items-center justify-center gap-10 px-4 md:px-20 ${
+        className={`w-full flex flex-col md:flex-row items-center justify-center gap-10 px-10 md:px-20 ${
           isLeft ? "md:flex-row" : "md:flex-row-reverse"
         }`}
       >
@@ -108,7 +113,9 @@ function Projects({
           />
         </div>
         <div className="w-full md:w-1/2 text-white text-center md:text-left">
-          <h2 className="text-4xl font-bold mb-4">{text}</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            <Link href={href}>{text}</Link>
+          </h2>
           <Image
             src={img2}
             alt={`${text} preview 2`}
