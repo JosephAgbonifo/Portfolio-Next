@@ -9,10 +9,10 @@ interface PageProps {
   params: {
     slug: string;
   };
-  searchParams?: Record<string, string | string[] | undefined>;
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default function ProjectPage({ params }: PageProps) {
+export default function ProjectPage({ params, searchParams }: PageProps) {
   const project = projects.find((p) => p.slug === params.slug);
 
   if (!project) {
