@@ -6,12 +6,14 @@ import HorizontalLines from "@/utils/bgline";
 import FloatingBobble from "@/utils/bobbles";
 
 interface PageProps {
-  params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
+  params: { slug: string };
+  searchParams?: Record<string, string | string[] | undefined>;
 }
-
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 export default function ProjectPage({ params }: PageProps) {
   const project = projects.find((p) => p.slug === params.slug);
 
