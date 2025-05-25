@@ -3,7 +3,7 @@
 import TypewriterLoop from "@/utils/typewriter";
 import Image from "next/image";
 import React from "react";
-import { useScrollProgress, usedocProgress } from "@/utils/scrollpercent";
+import { useScrollProgress } from "@/utils/scrollpercent";
 import ParallaxItem from "@/utils/parallax";
 import Link from "next/link";
 
