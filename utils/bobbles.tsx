@@ -47,7 +47,7 @@ const FloatingBobble: React.FC<FloatingBobbleProps> = ({
         borderRadius: "9999px",
         willChange: "transform",
         zIndex: -1,
-        opacity: 0.2,
+        opacity: 0.3,
       }}
     />
   );

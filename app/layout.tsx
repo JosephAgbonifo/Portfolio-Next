@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import ThemeProvider from "@/theme/theme-provider";
 import { Fira_Code, Fira_Sans } from "next/font/google";
 import "./globals.css";
+import ThemeToggle from "@/theme/theme-toggle";
 
 const firaSans = Fira_Sans({
   subsets: ["latin"],
@@ -57,7 +59,14 @@ export default function RootLayout({
       <body
         className={`${firaSans.variable} ${firaCode.variable} hide-scrollbar antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+        >
+          <ThemeToggle />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

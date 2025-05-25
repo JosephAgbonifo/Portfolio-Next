@@ -11,14 +11,14 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="bg-background md:border-2 md:p-20 border-mygray text-mygray p-10 flex flex-col items-center gap-6 text-center md:w-[90%] mx-auto rounded-lg mb-20"
+      className="dark:bg-background bg-foreground md:border-2 md:p-20 border-mygray text-mygray p-10 flex flex-col items-center gap-6 text-center md:w-[90%] mx-auto md:rounded-lg md:mb-20"
     >
       <div className="md:flex items-center gap-4">
-        <h2 className="flex-1 text-xl md:text-4xl font-semibold text-left md:leading-20">
+        <p className="text-background dark:text-foreground flex-1 text-xl md:text-4xl font-semibold text-left md:leading-20">
           Want to collaborate?
           <br /> hire me? <br />
           bring your project to life?
-        </h2>
+        </p>
         <div className="flex-1 ">
           <p className="text-sm text-gray-300 font-sans h-36 flex text-left md:text-center items-center md:justify-center">
             I&apos;m always open to exciting new ideas and meaningful

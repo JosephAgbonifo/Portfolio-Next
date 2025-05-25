@@ -13,16 +13,24 @@ const About = () => {
           <ParallaxItem speed={0.2}>
             <Image
               src="/icons/me.png"
-              alt="rocket boost"
+              alt="Joseph Agbonifo"
               width={300}
               height={300}
               unoptimized
-              className="w-32 md:w-80 block rounded-full border-2 border-magenta"
+              className="w-32 md:w-80 hidden md:block rounded-full border-2 border-magenta"
             />
           </ParallaxItem>
+          <Image
+            src="/icons/me.png"
+            alt="Joseph Agbonifo"
+            width={300}
+            height={300}
+            unoptimized
+            className="w-32 mb-10 md:w-80 md:hidden block rounded-full border-2 border-magenta"
+          />
         </div>
-        <div className="flex-1 flex text-justify justify-center items-start md:px-10 flex-col bg-black">
-          <h2 className="text-center md:text-left text-xl md:text-2xl pb-10 pt-10 ">
+        <div className="px-10 flex-1 flex text-justify justify-center items-start md:px-10 flex-col bg-black">
+          <h2 className="px-10 text-mygray dark:text-foreground text-center md:text-left text-xl md:text-2xl pb-10 pt-10 ">
             {" "}
             About Joseph
           </h2>

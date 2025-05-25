@@ -25,12 +25,12 @@ export default async function ProjectPage({
           className="rounded-2xl hover:shadow-lg transition-shadow duration-300 ease-in-out object-cover"
         />
       </div>
-      <p className="mb-10 text-white font-sans text-justify">
+      <p className="mb-10 dark:text-mygray text-foreground  font-sans text-justify">
         {project.description}
       </p>
       <div className="mb-4">
         <h2 className="text-xl font-semibold">Key Features:</h2>
-        <ul className="list-disc list-inside text-white font-sans">
+        <ul className="list-disc list-inside dark:text-mygray text-foreground  font-sans">
           {project.keyFeatures.map((feature) => (
             <li key={feature}>{feature}</li>
           ))}
@@ -38,7 +38,7 @@ export default async function ProjectPage({
       </div>
       <div className="mb-4">
         <h2 className="text-xl font-semibold">Technologies Used:</h2>
-        <ul className="list-disc list-inside text-white font-sans">
+        <ul className="list-disc list-inside dark:text-mygray text-foreground  font-sans">
           {project.technologies.map((tech) => (
             <li key={tech}>{tech}</li>
           ))}

@@ -39,7 +39,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-white px-4 py-20">
+    <section className="min-h-screen flex flex-col items-center justify-center dark:text-white text-foreground px-4 py-20">
       <h2 className="text-4xl md:text-6xl font-bold mb-12 text-center">
         Skillset & Tools ⚒️
       </h2>

@@ -10,29 +10,32 @@ import Link from "next/link";
 const Hero = () => {
   const scrollPercent = useScrollProgress();
   const transformStyle = `rotate(${scrollPercent * 6}deg)`;
-  const scrollPercentDoc = usedocProgress();
   const codeSnippet2 = `
-const About = () => {
-  const scrollPercent = useScrollProgress();
-  return (
-    <div className="min-h-screen p-10 bg-transparent">
-      <div className="relative flex flex-col md:flex-row">
-        <div className="flex-1 flex justify-center items-center md:pl-10 flex-col">
-          <ParallaxItem speed={0.2}>
-            MERN Developer | Tech Enthusiast | Web3 Enthusiast
-          </ParallaxItem>
-        </div>
-      </div>
-    </div>
-  );
-}; `;
+const joseph = {
+  name: "Joseph",
+  title: "Frontend Developer | Web3-ready",
+  stack: [
+    "React",
+    "JavaScript",
+    "ethers.js",
+    "wagmi",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "REST APIs",
+    "Next.js (API routes)"
+  ],
+  currentlyBuilding: ["Quirklr", "personal projects"],
+  passions: ["Clean UI", "Decentralized tech", "Creative problem-solving"]
+};
+`;
 
   return (
     <div>
-      <div className=" flex relative flex-col md:flex-row pt-0 md:pt-0 min-h-screen hide-scrollbar">
+      <div className=" flex relative flex-col md:flex-row md:p-32 min-h-screen hide-scrollbar">
         <div className="relative flex-1 flex justify-center items-start pl-10 flex-col">
           <ParallaxItem speed={0.5}>
-            <h1 className="text-7xl md:text-8xl font-bold text-white">
+            <h1 className="text-7xl md:text-8xl font-bold">
               I&apos;m <br />
               Joseph
               <br />
@@ -46,22 +49,28 @@ const About = () => {
                 : "fixed w-[80%] left-[10%] md:hidden md:right-10 top-10 mt-4 md:rotate-[270deg] md:origin-top-right "
             }grid grid-cols-4 gap-5 text-sm md:text-lg font-sans md:font-bold text-center`}
           >
-            <Link href="https://wa.link/9tu764" className="text-white">
+            <Link
+              href="https://wa.link/9tu764"
+              className="text-foreground dark:text-white"
+            >
               Whatsapp
             </Link>
             <Link
               href="https://github.com/josephagbonifo"
-              className="text-white"
+              className="text-foreground dark:text-white"
             >
               Github
             </Link>
             <Link
               href="https://www.linkedin.com/in/josephagbonifo/"
-              className="text-white"
+              className="text-foreground dark:text-white"
             >
               LinkedIn
             </Link>
-            <Link href="https://x.com/HelloJoeDev" className="text-white">
+            <Link
+              href="https://x.com/HelloJoeDev"
+              className="text-foreground dark:text-white"
+            >
               Twitter
             </Link>
           </div>
@@ -70,7 +79,7 @@ const About = () => {
             onClick={() => {
               location.href = "#footer";
             }}
-            className={`absolute bottom-10 w-32 mt-6 px-4 py-2 bg-magenta text-white rounded hover:bg-foreground transition-all duration-300 ease-in-out`}
+            className={`absolute -bottom-10 md:-bottom-20 w-32 mt-6 px-4 py-2 bg-magenta text-white rounded hover:bg-foreground transition-all duration-300 ease-in-out`}
             style={{
               transform: `translateY(${scrollPercent}px)`,
               transition: "transform 0.3s ease-in-out",
@@ -80,7 +89,7 @@ const About = () => {
             Get in touch
           </button>
         </div>
-        <div className="flex-1 absolute bottom-10 w-[60%] md:w-auto right-0 md:relative text-[8px] md:text-sm flex justify-start items-center pl-10">
+        <div className="flex-1 text-foreground absolute bottom-10 w-[60%] md:w-auto right-0 md:relative text-[8px] md:text-xs flex justify-start items-center pl-10">
           <div className="h-40">
             <TypewriterLoop text={codeSnippet2} speed={10} pause={5000} />
           </div>
@@ -94,33 +103,10 @@ const About = () => {
           className="absolute"
           style={{
             bottom: `${scrollPercent}%`,
-            left: `calc(${scrollPercent}% + 200px)`,
+            right: `calc(${scrollPercent}% + 200px)`,
             transform: transformStyle,
           }}
         />
-        <div
-          className="absolute bottom-5 right-5 w-[200px] h-[200px] origin-bottom-right"
-          style={{
-            bottom: `${scrollPercent}%`,
-            right: `calc(${scrollPercent}% * 2)`,
-            transform: transformStyle,
-            transformOrigin: "center center",
-          }}
-        >
-          <Image
-            src="/images/hellojoe.png"
-            alt="Hello Joe"
-            width={100}
-            height={100}
-            unoptimized
-            className="absolute right-10 bottom-20 origin-bottom-right"
-            style={{
-              bottom: `${scrollPercentDoc}%`,
-              right: `calc(${scrollPercent}% * 2)`,
-              transform: `rotate(${scrollPercent * 2}deg)`,
-            }}
-          />
-        </div>
       </div>
     </div>
   );

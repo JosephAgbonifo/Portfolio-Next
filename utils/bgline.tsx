@@ -8,7 +8,7 @@ const HorizontalLines = () => {
   return (
     <div className="fixed inset-0 z-[-10] pointer-events-none">
       {/* Desktop lines */}
-      <div className="hidden md:block h-full w-full absolute top-0 left-0">
+      <div className="hidden bg-background md:block h-full w-full absolute top-0 left-0">
         {desktopLines.map((_, i) => (
           <div
             key={`line-desktop-${i}`}
@@ -19,7 +19,7 @@ const HorizontalLines = () => {
       </div>
 
       {/* Mobile lines */}
-      <div className="block md:hidden h-full w-full absolute top-0 left-0">
+      <div className="block bg-background md:hidden h-full w-full absolute top-0 left-0">
         {mobileLines.map((_, i) => (
           <div
             key={`line-mobile-${i}`}
