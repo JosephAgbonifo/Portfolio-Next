@@ -35,7 +35,7 @@ const joseph = {
       <div className=" flex relative flex-col md:flex-row md:p-32 min-h-screen hide-scrollbar">
         <div className="relative flex-1 flex justify-center items-start pl-10 flex-col">
           <ParallaxItem speed={0.5}>
-            <h1 className="text-7xl md:text-8xl font-bold">
+            <h1 className="text-6xl md:text-8xl font-bold">
               I&apos;m <br />
               Joseph
               <br />
