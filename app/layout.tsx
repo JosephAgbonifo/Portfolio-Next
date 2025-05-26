@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Joseph | Frontend Developer Portfolio",
+    title: "Joseph | Developer Portfolio",
     description:
       "Check out my personal dev portfolio featuring clean code, responsive designs, and web projects I’m proud of.",
     images: ["/images/cover.png"],
