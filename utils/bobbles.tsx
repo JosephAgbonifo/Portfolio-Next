@@ -36,6 +36,7 @@ const FloatingBobble: React.FC<FloatingBobbleProps> = ({
 
   return (
     <div
+      className="opacity-20 dark:opacity-10"
       ref={ref}
       style={{
         position: "fixed",
@@ -47,7 +48,6 @@ const FloatingBobble: React.FC<FloatingBobbleProps> = ({
         borderRadius: "9999px",
         willChange: "transform",
         zIndex: -1,
-        opacity: 0.3,
       }}
     />
   );

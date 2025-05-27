@@ -98,33 +98,35 @@ function Projects({
 
   return (
     <div className="md: mb-20">
-      <div
-        className={`w-full flex flex-col md:flex-row items-center justify-center gap-10 px-10 md:px-20 ${
-          isLeft ? "md:flex-row" : "md:flex-row-reverse"
-        }`}
-      >
-        <div className="w-full md:w-1/2">
-          <Image
-            src={img1}
-            alt={`${text} preview 1`}
-            width={800}
-            height={600}
-            className="rounded-2xl shadow-lg"
-          />
+      <Link href={href}>
+        <div
+          className={`w-full flex flex-col md:flex-row items-center justify-center gap-10 px-10 md:px-20 ${
+            isLeft ? "md:flex-row" : "md:flex-row-reverse"
+          }`}
+        >
+          <div className="w-full md:w-1/2">
+            <Image
+              src={img1}
+              alt={`${text} preview 1`}
+              width={800}
+              height={600}
+              className="rounded-2xl shadow-lg"
+            />
+          </div>
+          <div className="w-full md:w-1/2 text-white text-center md:text-left">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 hover:underline transition-all duration-300 ease-in-out">
+              {text}
+            </h2>
+            <Image
+              src={img2}
+              alt={`${text} preview 2`}
+              width={800}
+              height={600}
+              className="rounded-2xl shadow-lg mt-6"
+            />
+          </div>
         </div>
-        <div className="w-full md:w-1/2 text-white text-center md:text-left">
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            <Link href={href}>{text}</Link>
-          </h2>
-          <Image
-            src={img2}
-            alt={`${text} preview 2`}
-            width={800}
-            height={600}
-            className="rounded-2xl shadow-lg mt-6"
-          />
-        </div>
-      </div>
+      </Link>
       <hr className="md:hidden my-10 text-magenta" />
     </div>
   );

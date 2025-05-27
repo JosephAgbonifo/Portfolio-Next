@@ -58,6 +58,9 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+a {
+  text-decoration: wavy;
+}
 h1,
 h2,
 h3 {
