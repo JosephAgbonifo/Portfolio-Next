@@ -2,7 +2,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Home, FolderGit2, User, Mail, Plus } from "lucide-react";
+import { Home, FolderGit2, User, Mail, Plus, Contact2 } from "lucide-react";
 
 const Header = () => {
   const router = useRouter();
@@ -89,7 +89,7 @@ const Header = () => {
           onClick={() => router.push("/contact")}
           className="bg-accent-purple text-white p-3 rounded-full shadow-lg pointer-events-auto active:scale-90 transition-transform"
         >
-          <Plus size={20} />
+          <Contact2 size={20} />
         </button>
       </div>
 

@@ -60,7 +60,7 @@ const ContactPage = () => {
                   // Direct Line
                 </span>
                 <a
-                  href="mailto:joseph@email.com"
+                  href="mailto:josephagbonifo9@gmail.com"
                   className="text-2xl font-sans font-bold text-foreground hover:text-accent-gold transition-colors"
                 >
                   josephagbonifo9@gmail.com
