@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, Zap, Target, Code, Cpu, Eye } from "lucide-react";
+import { Shield, Zap, Target, Code, Cpu, Eye, Download } from "lucide-react";
 
 const AboutPage = () => {
   const principles = [
@@ -185,6 +185,19 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+        <a
+          href="/Joseph_Agbonifo_Resume.pdf" // Ensure this filename matches your file in /public
+          download="Joseph_Agbonifo_Resume"
+          className="group mt-10 h-20 md:w-60 m-auto flex items-center gap-2 bg-foreground/5 border border-border-color px-4 py-2 rounded-xl hover:bg-foreground hover:text-background transition-all duration-300"
+        >
+          <span className="font-mono text-[10px] md:text-xl uppercase tracking-widest font-bold">
+            Resume
+          </span>
+          <Download
+            size={14}
+            className="group-hover:translate-y-0.5 transition-transform"
+          />
+        </a>
       </div>
     </main>
   );
