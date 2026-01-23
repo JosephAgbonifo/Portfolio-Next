@@ -100,11 +100,11 @@ const ProjectRow = ({
               aspectRatio: "16/9",
             }}
           >
-            <div className="w-full h-full rounded-2xl overflow-hidden border-2 border-accent-purple/30 shadow-2xl bg-background">
+            <div className="w-full aspect-square rounded-2xl overflow-hidden border-2 border-accent-purple/30 shadow-2xl bg-background">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-full object-cover"
+                className="w-full aspect-square object-contain p-10 object-center bg-white"
               />
             </div>
           </motion.div>
