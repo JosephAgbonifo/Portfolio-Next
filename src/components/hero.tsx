@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
 import { motion, Variants } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   // Animation variants for the floating cursors
   const floatingVariants: Variants = {
     animate: (i: number) => ({
@@ -124,7 +125,10 @@ const Hero = () => {
             bridge the gap between design and engineering.
           </p>
 
-          <div className="flex items-center gap-4">
+          <div
+            onClick={() => router.push("/my-projects")}
+            className="flex items-center gap-4"
+          >
             <button className="group relative bg-foreground text-background px-8 py-4 rounded-full font-sans font-bold transition-all hover:pr-12">
               Explore Projects
               <span className="absolute right-4 opacity-0 group-hover:opacity-100 transition-all underline decoration-accent-teal underline-offset-2">
