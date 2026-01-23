@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background and Base */
+  --background: #0a0a0a;
+  --foreground: #fdffc0;
+
+  /* Text & Cursor Accents */
+  --accent-purple: #a855f7; /* For "DIGITAL" and cursors */
+  --accent-gold: #fde047; /* For "EXPERIENCE" and cursors */
+  --accent-teal: #2dd4bf; /* For "DEVELOPER" and cursors */
+  --accent-pink: #ec4899; /* For "Product" tag / pink cursors */
+  --accent-blue: #3b82f6; /* For "Dev" tag / blue cursors */
+
+  /* Subtext & UI Elements */
+  --muted-text: #94a3b8; /* For "// Based in..." comments */
+  --border-color: #1f2937; /* For subtle button borders */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-gold: var(--accent-gold);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-blue: var(--accent-blue);
+  --color-muted-text: var(--muted-text);
+  --color-border-color: var(--border-color);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
