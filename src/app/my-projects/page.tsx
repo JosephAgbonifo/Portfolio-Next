@@ -39,7 +39,7 @@ const ProjectRow = ({
           <img
             src={project.image}
             alt={project.name}
-            className="w-full aspect-square object-center p-10 object-contain"
+            className="w-full aspect-square object-center p-10 object-contain bg-foreground"
           />
         </div>
 
@@ -104,7 +104,7 @@ const ProjectRow = ({
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full aspect-square object-contain p-10 object-center bg-white"
+                className="w-full aspect-square object-contain p-10 object-center bg-foreground"
               />
             </div>
           </motion.div>
