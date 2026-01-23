@@ -28,7 +28,7 @@ export const projects: Project[] = [
     name: "Morph",
     description:
       "A smart ticketing ecosystem designed to simplify event experiences. By leveraging the Pi SDK and robust backend logic, Morph empowers organizers with transparent tools and provides attendees with secure, effortless access to global events.",
-    stack: ["Pi SDK", "Next.js", "Node.js", "Express.js", "Tailwind"],
+    stack: ["Pi-SDK", "Next.js", "Node.js", "Express.js", "Tailwind"],
     previewUrl: "https://morphevent.vercel.app/",
     githubUrl: "https://github.com/josephagbonifo/Tiketa",
     repoStatus: "private", // Set to private as it is 'In Development'

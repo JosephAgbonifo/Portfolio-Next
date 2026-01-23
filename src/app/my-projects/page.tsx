@@ -16,16 +16,17 @@ const ProjectRow = ({
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="relative border-b border-border-color/50 group"
     >
-      <div className="grid grid-cols-12 items-center py-8 px-4 gap-4 transition-colors group-hover:bg-foreground/[0.02]">
+      <div className="flex flex-col md:grid md:grid-cols-12 md:items-center py-8 px-4 gap-6 md:gap-4 transition-colors group-hover:bg-foreground/[0.02]">
         {/* Project Name & Year */}
-        <div className="col-span-6 md:col-span-4">
-          <h2 className="text-xl md:text-3xl font-sans font-black text-foreground uppercase tracking-tighter">
+        <div className="md:col-span-4">
+          <h2 className="text-2xl md:text-3xl font-sans font-black text-foreground uppercase tracking-tighter">
             {project.name}
           </h2>
           <span className="font-mono text-[10px] text-muted-text uppercase tracking-widest mt-1 block">
@@ -33,8 +34,17 @@ const ProjectRow = ({
           </span>
         </div>
 
-        {/* Stack (Hidden on very small screens) */}
-        <div className="hidden md:flex col-span-4 flex-wrap gap-2">
+        {/* Mobile-Only Image Display */}
+        <div className="md:hidden w-full overflow-hidden rounded-xl border border-border-color">
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full aspect-square object-center p-10 object-contain"
+          />
+        </div>
+
+        {/* Stack */}
+        <div className="flex md:col-span-4 flex-wrap gap-2">
           {project.stack.map((s) => (
             <span
               key={s}
@@ -45,22 +55,27 @@ const ProjectRow = ({
           ))}
         </div>
 
+        {/* Description - Visible on Mobile, Hidden on Desktop (optional, fits the "all details" request) */}
+        <p className="md:hidden text-muted-text text-sm leading-relaxed font-sans">
+          {project.description}
+        </p>
+
         {/* Links */}
-        <div className="col-span-6 md:col-span-4 flex justify-end items-center gap-6">
+        <div className="flex md:col-span-4 justify-start md:justify-end items-center gap-6 pt-4 md:pt-0">
           <a
             href={project.previewUrl}
             target="_blank"
-            className="text-xs font-sans font-bold uppercase tracking-widest text-foreground hover:text-accent-purple transition-colors"
+            className="text-xs font-sans font-bold uppercase tracking-widest text-foreground hover:text-accent-purple transition-colors flex items-center gap-2"
           >
-            Live Site
+            Live Site <span className="md:hidden">↗</span>
           </a>
 
           {project.repoStatus === "public" ? (
             <a
               href={project.githubUrl}
-              className="text-xs font-sans font-bold uppercase tracking-widest text-foreground hover:text-accent-teal transition-colors"
+              className="text-xs font-sans font-bold uppercase tracking-widest text-foreground hover:text-accent-teal transition-colors flex items-center gap-2"
             >
-              GitHub
+              GitHub <span className="md:hidden">↗</span>
             </a>
           ) : (
             <span className="text-[10px] font-mono text-muted-text/50 uppercase italic">
@@ -77,11 +92,11 @@ const ProjectRow = ({
             initial={{ opacity: 0, scale: 0.8, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             exit={{ opacity: 0, scale: 0.8, x: 20 }}
-            className="fixed pointer-events-none z-50 hidden lg:block"
+            className="fixed pointer-events-none z-50 hidden md:block" // Changed hidden lg:block to md:block
             style={{
-              top: "30%",
-              right: "15%",
-              width: "400px",
+              top: "35%",
+              right: "10%",
+              width: "450px",
               aspectRatio: "16/9",
             }}
           >
@@ -101,10 +116,10 @@ const ProjectRow = ({
 
 export default function MyProjectsPage() {
   return (
-    <main className="min-h-screen bg-background pt-32 pb-20 px-6 md:px-12">
+    <main className="min-h-screen bg-background pt-32 pb-20 px-6 md:px-12 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Navigation Back */}
-        <Link href="/" className="group flex items-center gap-2 mb-16">
+        <Link href="/" className="group flex items-center gap-2 mb-16 w-fit">
           <span className="text-accent-teal group-hover:-translate-x-1 transition-transform">
             ←
           </span>
@@ -114,8 +129,8 @@ export default function MyProjectsPage() {
         </Link>
 
         {/* Page Header */}
-        <header className="mb-20">
-          <h1 className="text-7xl md:text-[10rem] font-sans font-black text-foreground uppercase tracking-[0.1em] leading-none opacity-10 absolute -z-10 select-none">
+        <header className="mb-20 relative">
+          <h1 className="text-7xl md:text-[10rem] font-sans font-black text-foreground uppercase tracking-[0.1em] leading-none opacity-5 absolute -top-10 -left-4 -z-10 select-none">
             ARCHIVE
           </h1>
           <div className="pt-10">
@@ -139,7 +154,7 @@ export default function MyProjectsPage() {
         </div>
 
         {/* Footer info */}
-        <footer className="mt-20 flex justify-between items-center font-mono text-[10px] text-muted-text uppercase tracking-widest">
+        <footer className="mt-20 pt-10 border-t border-border-color/30 flex justify-between items-center font-mono text-[10px] text-muted-text uppercase tracking-widest">
           <span>Total Projects: {projects.length}</span>
           <span>Ref: 2023 — 2026</span>
         </footer>
