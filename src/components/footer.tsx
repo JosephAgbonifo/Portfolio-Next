@@ -69,10 +69,11 @@ const Footer = () => {
               for Q1 2026.
             </p>
             <a
-              href="mailto:joseph@example.com"
+              href="mailto:josephagbonifo9@gmail.com"
               className="flex items-center gap-2 text-foreground font-sans font-bold text-xl hover:text-accent-teal transition-colors"
             >
-              <Mail size={20} className="text-accent-teal" /> joseph@email.com
+              <Mail size={20} className="text-accent-teal" />{" "}
+              josephagbonifo9@gmail.com
             </a>
           </div>
         </div>
